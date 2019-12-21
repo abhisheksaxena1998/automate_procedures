@@ -26,7 +26,7 @@ SECRET_KEY = 'mz3cqo=@g9$d+2t&)tjc1(6+s81@9+wv0-a2@arthg+40+7*gs'
 DEBUG = True
 #django_heroku.settings(locals())
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['automate-proc.herokuapp.com' ]
 
 
 # Application definition
