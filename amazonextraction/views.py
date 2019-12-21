@@ -17,7 +17,7 @@ def result(request):
     #nm="amazonextraction\\az_joy_corpus.txt" #request.GET['url']
     #"az_joy_corpus.txt"
     nm=request.GET['url']
-    nm="amazonextraction\\"+nm
+    nm="amazonextraction/" + nm
     sample = open(nm, "r",encoding='utf-8') 
     s = sample.read() 
 
