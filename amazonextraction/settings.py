@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
+#import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -24,7 +24,7 @@ SECRET_KEY = 'mz3cqo=@g9$d+2t&)tjc1(6+s81@9+wv0-a2@arthg+40+7*gs'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 ALLOWED_HOSTS = []
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -70,6 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'amazonextraction.wsgi.application'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
